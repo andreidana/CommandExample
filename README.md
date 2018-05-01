@@ -22,5 +22,5 @@ Use the Command pattern when you want to
 **Related Patterns**
 
 - [Composite](https://github.com/andreidana/CompositePattern)
-- Memento
+- [Memento](https://github.com/andreidana/MementoPattern)
 - [Prototype](https://github.com/andreidana/PrototypeExample)
