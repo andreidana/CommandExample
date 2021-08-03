@@ -4,20 +4,20 @@ namespace CommandExample
 {
     public class CalculatorOperations
     {
-        private int _curr = 0;
+        private int _current;
 
         public void Operation(char operation, int operand)
         {
             switch (operation)
             {
-                case '+': _curr += operand; break;
-                case '-': _curr -= operand; break;
-                case '*': _curr *= operand; break;
-                case '/': _curr /= operand; break;
+                case '+': _current += operand; break;
+                case '-': _current -= operand; break;
+                case '*': _current *= operand; break;
+                case '/': _current /= operand; break;
             }
             Console.WriteLine(
                 "Current value = {0,3} (following {1} {2})",
-                _curr, operation, operand);
+                _current, operation, operand);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace CommandExample
             _calculator.Operation(_operation, _operand);
         }
 
-        public void Unexecute()
+        public void Undo()
         {
             _calculator.Operation(Undo(_operation), _operand);
         }

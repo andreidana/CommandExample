@@ -16,7 +16,7 @@ namespace CommandExample
             for (var i = 0; i < levels; i++)
             {
                 if (_current >= _commands.Count - 1) continue;
-                ICommand command = _commands[_current++];
+                var command = _commands[_current++];
                 command.Execute();
             }
         }
@@ -28,14 +28,14 @@ namespace CommandExample
             for (var i = 0; i < levels; i++)
             {
                 if (_current <= 0) continue;
-                ICommand command = _commands[--_current] as ICommand;
-                command.Unexecute();
+                var command = _commands[--_current] as ICommand;
+                command.Undo();
             }
         }
 
         public void Compute(char @operator, int operand)
         {
-            ICommand command = new Calculator(_calculator, @operator, operand);
+            var command = new Calculator(_calculator, @operator, operand);
             command.Execute();
 
             _commands.Add(command);
